@@ -1,0 +1,38 @@
+https://www.npmjs.com/package/@tinymce/tinymce-angular
+https://stackoverflow.com/questions/70789997/getting-error-trying-to-use-tinymce-cloud-in-my-angular-13-app-module-tinymce
+@angular-devkit/build-angular <error>
+https://stackoverflow.com/questions/50333003/angular-6-could-not-find-module-angular-devkit-build-angular
+https://angular.dev/cli/update/
+https://stackoverflow.com/questions/56623458/could-not-find-the-implementation-for-builder-angular-devkit-build-angulardev
+https://nodejs.org/en/blog/release/v20.16.0
+https://github.com/angular/angular/issues/57274
+https://github.com/angular/angular/issues/57550
+https://stackoverflow.com/questions/69222372/how-to-go-to-specific-commit-in-git
+https://stackoverflow.com/questions/41600326/how-to-revert-the-second-to-last-commit-but-not-the-last-commit
+https://stackoverflow.com/questions/39428132/custom-elements-schema-added-to-ngmodule-schemas-still-showing-error
+angular cli version for npm install -g @angular/cli@17.3.12
+https://stackoverflow.com/questions/50363530/how-to-downgrade-angular-cli-version
+An unhandled exception occurred: Could not find the implementation for builder @angular-devkit/build-angular:application angular 18
+https://stackoverflow.com/questions/56623458/could-not-find-the-implementation-for-builder-angular-devkit-build-angulardev
+https://github.com/angular/angular/issues/57274
+https://github.com/vercel/next.js/issues/66239
+https://stackoverflow.com/questions/56623458/could-not-find-the-implementation-for-builder-angular-devkit-build-angulardev
+https://github.com/angular/angular/issues/57274
+https://github.com/vercel/next.js/issues/66239
+npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported angular
+Warning: The current version of Node (20.16.0) is not supported by Angular.
+https://stackoverflow.com/questions/56623458/could-not-find-the-implementation-for-builder-angular-devkit-build-angulardev
+An unhandled exception occurred: Could not find the implementation for builder @angular-devkit/build-angular:application
+
+https://stackoverflow.com/questions/45565473/how-to-solve-error-cannot-find-module-json-parse-helpfulerror
+https://stackoverflow.com/questions/43931986/how-to-upgrade-angular-cli-to-the-latest-version
+
+https://stackoverflow.com/questions/72701446/error-ts2314-generic-type-%C9%B5%C9%B5componentdeclaration-requires-7-type-arguments
+
+-------
+
+plugins: https://www.npmjs.com/package/signal-exit
+https://www.npmjs.com/package/rimraf
+
+https://www.npmjs.com/package/is-glob
+https://www.npmjs.com/package/is-extglob
