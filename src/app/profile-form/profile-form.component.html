@@ -1,0 +1,47 @@
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <h2>Profile Form</h2>
+  
+    <label for="first-name">First Name: </label>
+    <input id="first-name" type="text" formControlName="firstName">
+  
+    <label for="last-name">Last Name: </label>
+    <input id="last-name" type="text" formControlName="lastName">
+  
+    <div formGroupName="address">
+      <label for="street">Street: </label>
+      <input id="street" type="text" formControlName="street">
+    
+      <label for="city">City: </label>
+      <input id="city" type="text" formControlName="city">
+    
+      <label for="state">State: </label>
+      <input id="state" type="text" formControlName="state">
+    
+      <label for="zip">Zip Code: </label>
+      <input id="zip" type="text" formControlName="zip">
+    </div>
+  
+  
+  
+  
+    <h1>TinyMCE 5 Angular Demo</h1>
+    <editor
+      formControlName="rte"
+      apiKey="qagffr3pkuv17a8on1afax661irst1hbr4e6tbv888sz91jc"
+      [init]="{
+        height: 300,
+        menubar: false,
+        plugins: [
+          'advlist autolink lists link image charmap print preview anchor',
+          'searchreplace visualblocks code fullscreen',
+          'insertdatetime media table paste code help wordcount'
+        ],
+        toolbar:
+          'undo redo | formatselect | bold italic backcolor | \
+          alignleft aligncenter alignright alignjustify | \
+          bullist numlist outdent indent | removeformat | help'
+      }"
+    ></editor>
+  
+    <button type="submit">Submit</button>
+  </form>
