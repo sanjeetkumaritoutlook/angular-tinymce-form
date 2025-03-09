@@ -49,7 +49,7 @@ jobs:
         run: |
          mkdir -p ./deploy
          cp -r ./dist/angular-tinymce-form/* ./deploy/
-         cp -r ./dist/web-components-build/* ./deploy/web-components/  
+         cp -r ./dist/web-components/* ./deploy/web-components/  
 
       - name: Upload build artifacts
         uses: actions/upload-pages-artifact@v3
