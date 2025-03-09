@@ -37,17 +37,28 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build Angular app
+      - name: Build Main Angular app
         run: npm run build -- --base-href=/angular-tinymce-form/
+
+       # Build Web Components Separately
+      - name: Build Web Components
+        run: npm run build web-components-build -- --configuration production
+        
+       # Create a deployment directory for GitHub Pages
+      - name: Prepare Deployment Directory
+        run: |
+         mkdir -p ./deploy
+         cp -r ./dist/angular-tinymce-form/* ./deploy/
+         cp -r ./dist/web-components-build/* ./deploy/web-components/  
 
       - name: Upload build artifacts
         uses: actions/upload-pages-artifact@v3
         with:
           name: github-pages
-          path: ./dist/angular-tinymce-form
+          path: ./deploy
     
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/angular-tinymce-form
+          

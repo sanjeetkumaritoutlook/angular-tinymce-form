@@ -9,14 +9,18 @@ import { EditorModule } from '@tinymce/tinymce-angular';
 import { UserModule } from './user/user.module';
 import { EditorComponent } from './editor/editor.component';
 import { ProfileFormComponent } from './profile-form/profile-form.component';
-import { ExampleComponent } from './example/example.component'; // Import the feature module
+import { ExampleComponent } from './example/example.component';
+import { FormOneComponent } from './web-components/form-one/form-one.component';
+import { FormTwoComponent } from './web-components/form-two/form-two.component'; // Import the feature module
 
 @NgModule({
   declarations: [
     AppComponent,
     EditorComponent,
     ProfileFormComponent,
-    ExampleComponent
+    ExampleComponent,
+    FormOneComponent,
+    FormTwoComponent
   ],
   imports: [
     BrowserModule,
