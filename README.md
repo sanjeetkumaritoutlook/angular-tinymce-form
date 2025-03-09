@@ -10,6 +10,13 @@ Run in node Terminal set NODE_OPTIONS=--openssl-legacy-provider
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+## Two separate app: main angular app and web components
+
+ng build web-components --configuration production
+
+ng build
+
+web component has separate main.ts, app.module.ts ,tsconfig.app.json (its mentioned separately under projects in angular.json)
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
