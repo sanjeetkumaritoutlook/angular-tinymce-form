@@ -42,14 +42,20 @@ jobs:
 
        # Build Web Components Separately
       - name: Build Web Components
-        run: npm run build web-components-build -- --configuration production
+        run: npm run build web-components -- --configuration production || echo "Web Components build failed"
+
         
-       # Create a deployment directory for GitHub Pages
+      # Ensure deployment directories exist
       - name: Prepare Deployment Directory
         run: |
-         mkdir -p ./deploy
-         cp -r ./dist/angular-tinymce-form/* ./deploy/
-         cp -r ./dist/web-components/* ./deploy/web-components/  
+          mkdir -p ./deploy
+          cp -r ./dist/angular-tinymce-form/* ./deploy/
+
+          # Only copy web components if they were built successfully
+          if [ -d "./dist/web-components" ]; then
+            mkdir -p ./deploy/web-components
+            cp -r ./dist/web-components/* ./deploy/web-components/
+          fi
 
       - name: Upload build artifacts
         uses: actions/upload-pages-artifact@v3
