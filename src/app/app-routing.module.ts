@@ -6,6 +6,7 @@ import { ExampleComponent } from './example/example.component';
 import {UserDetailsComponent} from './user/user-details/user-details.component';
 import { FormOneComponent } from './web-components/form-one/form-one.component';
 import { FormTwoComponent } from './web-components/form-two/form-two.component';
+import { UsernameCheckComponent } from './username-check/username-check.component';
 const routes: Routes = [
   { path: '', redirectTo: '/user', pathMatch: 'full' },
   { path: 'user', loadChildren: () => import('./user/user.module').then(m => m.UserModule) },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'user-details', component: UserDetailsComponent },  //this is from feature module
   { path: 'microui-one', component: FormOneComponent },
   { path: 'microui-two', component: FormTwoComponent },       // Route for ProfileFormComponent
+  { path: 'username', component: UsernameCheckComponent },  
   { path: '**', component: ExampleComponent },
 ];
 

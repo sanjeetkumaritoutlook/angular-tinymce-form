@@ -1,0 +1,16 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <label for="username">Choose a username:</label>
+  <input id="username" type="text" formControlName="username" placeholder="Enter username">
+
+  <div class="messages">
+    <small *ngIf="username.pending">⏳ Checking...</small>
+    <small *ngIf="username.hasError('required') && username.touched">
+      ⚠️ Username is required
+    </small>
+    <small *ngIf="username.errors?.['usernameTaken']">
+      ❌ Username already taken
+    </small>
+  </div>
+
+  <button type="submit" [disabled]="form.invalid || username.pending">Submit</button>
+</form>

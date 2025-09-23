@@ -11,7 +11,8 @@ import { EditorComponent } from './editor/editor.component';
 import { ProfileFormComponent } from './profile-form/profile-form.component';
 import { ExampleComponent } from './example/example.component';
 import { FormOneComponent } from './web-components/form-one/form-one.component';
-import { FormTwoComponent } from './web-components/form-two/form-two.component'; // Import the feature module
+import { FormTwoComponent } from './web-components/form-two/form-two.component';
+import { UsernameCheckComponent } from './username-check/username-check.component'; // Import the feature module
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormTwoComponent } from './web-components/form-two/form-two.component';
     ProfileFormComponent,
     ExampleComponent,
     FormOneComponent,
-    FormTwoComponent
+    FormTwoComponent,
+    UsernameCheckComponent
   ],
   imports: [
     BrowserModule,

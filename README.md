@@ -6,6 +6,28 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run in node Terminal set NODE_OPTIONS=--openssl-legacy-provider
 
+## AI course
+https://github.com/microsoft/AI-For-Beginners
+
+
+## GST 2.0
+Honda's Activa range, covering both 110cc and 125cc 
+
+https://www.ndtvprofit.com/amp/auto/honda-activa-to-become-cheaper-by-rs-7000-with-gst-price-cut-check-latest-rates-here
+
+https://www.ndtv.com/india-news/mahindra-honda-toyota-cars-and-bikes-that-will-see-a-price-cut-under-gst-2-0-9316729
+
+
+Tata Nexon in Hyderabad starts around ₹8 Lakh
+
+Tata Harrier. Ex-Showroom ( in Hyderabad ) Rs. 15 - 26.69 Lakh
+
+Hyundai Creta in Hyderabad ranges from Rs. 13.38 Lakh
+
+Toyota Fortuner price in New Delhi start at ₹33.65 Lakh.
+
+voltas dish washer machine
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
