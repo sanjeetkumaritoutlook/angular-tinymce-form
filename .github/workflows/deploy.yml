@@ -32,10 +32,22 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '16'
+          node-version: '18'
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Create environment.prod.ts from secret
+        env:
+          TINYMCE_API_KEY: ${{ secrets.TINYMCE_API_KEY }}
+        run: |
+          mkdir -p src/environments
+          cat > src/environments/environment.prod.ts <<EOF
+          export const environment = {
+            production: true,
+            tinymceApiKey: "${TINYMCE_API_KEY}"
+          };
+          EOF
 
       - name: Build Main Angular app
         run: npm run build -- --base-href=/angular-tinymce-form/

@@ -32,6 +32,20 @@ voltas dish washer machine
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+## CI / GitHub Pages deployment and TinyMCE API key
+
+This repository's GitHub Actions workflow injects the TinyMCE API key at build time from a repository secret named `TINYMCE_API_KEY`.
+
+To set it up:
+
+- Go to your repository Settings -> Secrets -> Actions -> New repository secret
+- Name: `TINYMCE_API_KEY`
+- Value: your TinyMCE API key
+
+When the workflow runs on push to `main`, it writes `src/environments/environment.prod.ts` containing the key, builds the app, and deploys the `dist/angular-tinymce-form` output to GitHub Pages.
+
+Locally you can set the key in `src/environments/environment.ts` for development if needed (not recommended for public repos).
+
 ## Two separate app: main angular app and web components
 
 ng build web-components --configuration production
