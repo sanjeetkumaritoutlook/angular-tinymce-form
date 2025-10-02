@@ -68,6 +68,16 @@ Filtering in each column
 Pagination with 5 rows per page
 
 Data fetched from a real API (jsonplaceholder.typicode.com/users)
+
+a real-world Angular 12 project uses AG Grid:
+•	Data fetched from an API
+•	Pagination
+•	Sorting & filtering
+•	External quick search
+•	Row selection
+•	Action buttons per row
+•	Export to CSV
+
 ## Two separate app: main angular app and web components
 
 ng build web-components --configuration production

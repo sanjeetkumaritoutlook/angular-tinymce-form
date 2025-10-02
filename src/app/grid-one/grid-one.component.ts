@@ -11,6 +11,7 @@ import { GridApi, ColumnApi } from 'ag-grid-community';
 export class GridOneComponent implements OnInit {
 
    columnDefs = [
+    { headerName: '', checkboxSelection: true, width: 40 },
     { field: 'id', sortable: true, filter: true, width: 80 },
     { field: 'name', sortable: true, filter: true },
     { field: 'username', sortable: true, filter: true },
@@ -21,8 +22,11 @@ export class GridOneComponent implements OnInit {
   sortable: true, 
   filter: true,
   cellRenderer: (params: ICellRendererParams) => `<a href="http://${params.value}" target="_blank">${params.value}</a>` 
-}
-
+},
+  {
+      headerName: 'Actions',
+      cellRenderer: (params: ICellRendererParams) => `<button onclick="alert('Selected: ${params.data.name}')">View</button>`
+    }
   ];
 
   rowData: any[] = [];
