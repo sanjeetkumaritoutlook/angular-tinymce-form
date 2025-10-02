@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## for error 'error:03000086:digital envelope routines::initialization error',
 
-Run in node Terminal set NODE_OPTIONS=--openssl-legacy-provider
+Run in node Terminal-> set NODE_OPTIONS=--openssl-legacy-provider
 
 ## AI course
 https://github.com/microsoft/AI-For-Beginners
@@ -46,6 +46,28 @@ When the workflow runs on push to `main`, it writes `src/environments/environmen
 
 Locally you can set the key in `src/environments/environment.ts` for development if needed (not recommended for public repos).
 
+## ag-grid
+AG Grid is a very popular and powerful data grid/table library that works well with Angular. It gives you features like sorting, filtering, pagination, row grouping, editing, exporting, etc., out of the box.
+
+AG Grid (Advanced Data Grid) is a powerful and versatile JavaScript data grid component. It's designed for developers who need to display and manipulate large datasets in a tabular format within their web applications. It's often compared to Excel, but it's rendered in the browser and tightly integrated with JavaScript frameworks like React, Angular, Vue.js, and JavaScript itself.
+
+https://www.ag-grid.com/angular-data-grid/getting-started/
+
+for angular v12 and node v16 setup
+
+npm install ag-grid-angular@28 ag-grid-community@28
+
+You should see:
+
+A fully styled AG Grid table
+
+Sorting on columns
+
+Filtering in each column
+
+Pagination with 5 rows per page
+
+Data fetched from a real API (jsonplaceholder.typicode.com/users)
 ## Two separate app: main angular app and web components
 
 ng build web-components --configuration production

@@ -12,8 +12,10 @@ import { ProfileFormComponent } from './profile-form/profile-form.component';
 import { ExampleComponent } from './example/example.component';
 import { FormOneComponent } from './web-components/form-one/form-one.component';
 import { FormTwoComponent } from './web-components/form-two/form-two.component';
+import { GridOneComponent } from './grid-one/grid-one.component';
+import { HttpClientModule } from '@angular/common/http';
 import { UsernameCheckComponent } from './username-check/username-check.component'; // Import the feature module
-
+import { AgGridModule } from 'ag-grid-angular'; // Angular Data Grid Component
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,8 @@ import { UsernameCheckComponent } from './username-check/username-check.componen
     ExampleComponent,
     FormOneComponent,
     FormTwoComponent,
-    UsernameCheckComponent
+    UsernameCheckComponent,
+    GridOneComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +33,8 @@ import { UsernameCheckComponent } from './username-check/username-check.componen
     FormsModule,
     ReactiveFormsModule,
     EditorModule,
+    AgGridModule, 
+    HttpClientModule,
     UserModule // Add it here
   ],
   providers: [],
