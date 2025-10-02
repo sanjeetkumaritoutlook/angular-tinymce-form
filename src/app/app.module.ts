@@ -15,7 +15,8 @@ import { FormTwoComponent } from './web-components/form-two/form-two.component';
 import { GridOneComponent } from './grid-one/grid-one.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UsernameCheckComponent } from './username-check/username-check.component'; // Import the feature module
-import { AgGridModule } from 'ag-grid-angular'; // Angular Data Grid Component
+import { AgGridModule } from 'ag-grid-angular';
+import { GridRowActionsComponent } from './grid-row-actions/grid-row-actions.component'; // Angular Data Grid Component
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,8 @@ import { AgGridModule } from 'ag-grid-angular'; // Angular Data Grid Component
     FormOneComponent,
     FormTwoComponent,
     UsernameCheckComponent,
-    GridOneComponent
+    GridOneComponent,
+    GridRowActionsComponent
   ],
   imports: [
     BrowserModule,

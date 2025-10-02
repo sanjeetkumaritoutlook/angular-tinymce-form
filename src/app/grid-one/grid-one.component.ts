@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ICellRendererParams } from 'ag-grid-community';
 import { GridApi, ColumnApi } from 'ag-grid-community';
-
+import { GridRowActionsComponent } from '../grid-row-actions/grid-row-actions.component';
 @Component({
   selector: 'app-grid-one',
   templateUrl: './grid-one.component.html',
@@ -25,8 +25,10 @@ export class GridOneComponent implements OnInit {
 },
   {
       headerName: 'Actions',
-      cellRenderer: (params: ICellRendererParams) => `<button onclick="alert('Selected: ${params.data.name}')">View</button>`
+      cellRendererFramework: GridRowActionsComponent,
+      width: 150
     }
+
   ];
 
   rowData: any[] = [];
@@ -65,6 +67,14 @@ export class GridOneComponent implements OnInit {
   // Export all rows to CSV
   exportAll() {
     this.gridApi.exportDataAsCsv();
+  }
+    // Optional: handle row actions from the child component
+  onRowAction(event: { type: string; data: any }) {
+    if (event.type === 'view') {
+      alert('View: ' + event.data.name);
+    } else if (event.type === 'edit') {
+      alert('Edit: ' + event.data.name);
+    }
   }
 
 }
