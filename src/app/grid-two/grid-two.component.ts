@@ -3,7 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { GridApi, GridReadyEvent } from 'ag-grid-community';
 import { GridStatusCellComponent } from '../grid-status-cell/grid-status-cell.component';
 import { ICellRendererParams } from 'ag-grid-community';
-
+import { MatDialog } from '@angular/material/dialog';
+import { EditDialogComponent } from '../edit-dialog/edit-dialog.component';
 @Component({
   selector: 'app-grid-two',
   templateUrl: './grid-two.component.html',
@@ -17,7 +18,7 @@ rowData: any[] = [];
   quickFilter: string = '';
   departmentFilter: string = '';
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient,private dialog: MatDialog) {
     this.columnDefs = [
       { headerName: '', checkboxSelection: true, width: 40 },
       { field: 'id', sortable: true, filter: true, width: 80 },
@@ -56,23 +57,38 @@ rowData: any[] = [];
   
     // 👇 Handle View/Edit/Delete
    onGridReady(params: any) {
-    params.api.addEventListener('cellClicked', (event: any) => {
-      if (event.colDef.headerName === 'Actions') {
-        if (event.event.target.classList.contains('btn-edit')) {
-          this.onEdit(event.data);
-        } else if (event.event.target.classList.contains('btn-delete')) {
-          this.onDelete(event.data);
-        }
+  this.gridApi = params.api;   // 👈 store the api reference
+
+  // Optional: store columnApi if needed later
+  // this.gridColumnApi = params.columnApi;
+
+  params.api.addEventListener('cellClicked', (event: any) => {
+    if (event.colDef.headerName === 'Actions') {
+      if (event.event.target.classList.contains('btn-edit')) {
+        this.onEdit(event.data);
+      } else if (event.event.target.classList.contains('btn-delete')) {
+        this.onDelete(event.data);
       }
-    });
-  }
+    }
+  });
+}
+
 
    onView(row: any) {
     alert(`Viewing details for: ${row.name} (Role: ${row.role})`);
   }
 
-  onEdit(row: any) {
-    alert(`Editing: ${row.name} (ID: ${row.id})`);
+    onEdit(row: any) {
+    const dialogRef = this.dialog.open(EditDialogComponent, {
+      width: '400px',
+      data: { ...row } // pass a copy
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this.rowData = this.rowData.map(r => (r.id === row.id ? result : r));
+      }
+    });
   }
 
   

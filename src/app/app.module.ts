@@ -21,6 +21,10 @@ import { GridTwoComponent } from './grid-two/grid-two.component';
 import { GridStatusCellComponent } from './grid-status-cell/grid-status-cell.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EditDialogComponent } from './edit-dialog/edit-dialog.component'; // Angular Data Grid Component
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +49,10 @@ import { EditDialogComponent } from './edit-dialog/edit-dialog.component'; // An
     AgGridModule, 
     HttpClientModule,
     UserModule,
-    BrowserAnimationsModule // Add it here
+    BrowserAnimationsModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
