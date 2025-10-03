@@ -8,6 +8,7 @@ import { FormOneComponent } from './web-components/form-one/form-one.component';
 import { FormTwoComponent } from './web-components/form-two/form-two.component';
 import { UsernameCheckComponent } from './username-check/username-check.component';
 import { GridOneComponent } from './grid-one/grid-one.component';
+import { GridTwoComponent } from './grid-two/grid-two.component';
 const routes: Routes = [
   { path: '', redirectTo: '/user', pathMatch: 'full' },
   { path: 'user', loadChildren: () => import('./user/user.module').then(m => m.UserModule) },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'microui-two', component: FormTwoComponent },       // Route for ProfileFormComponent
   { path: 'username', component: UsernameCheckComponent },  
   { path: 'ag-grid', component: GridOneComponent },  
+  { path: 'enterprise-grid', component: GridTwoComponent },  
   { path: '**', component: ExampleComponent },
 ];
 
