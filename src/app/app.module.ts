@@ -18,7 +18,9 @@ import { UsernameCheckComponent } from './username-check/username-check.componen
 import { AgGridModule } from 'ag-grid-angular';
 import { GridRowActionsComponent } from './grid-row-actions/grid-row-actions.component';
 import { GridTwoComponent } from './grid-two/grid-two.component';
-import { GridStatusCellComponent } from './grid-status-cell/grid-status-cell.component'; // Angular Data Grid Component
+import { GridStatusCellComponent } from './grid-status-cell/grid-status-cell.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EditDialogComponent } from './edit-dialog/edit-dialog.component'; // Angular Data Grid Component
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +33,8 @@ import { GridStatusCellComponent } from './grid-status-cell/grid-status-cell.com
     GridOneComponent,
     GridRowActionsComponent,
     GridTwoComponent,
-    GridStatusCellComponent
+    GridStatusCellComponent,
+    EditDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,8 @@ import { GridStatusCellComponent } from './grid-status-cell/grid-status-cell.com
     EditorModule,
     AgGridModule, 
     HttpClientModule,
-    UserModule // Add it here
+    UserModule,
+    BrowserAnimationsModule // Add it here
   ],
   providers: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

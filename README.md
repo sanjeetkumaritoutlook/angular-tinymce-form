@@ -78,6 +78,12 @@ a real-world Angular 12 project uses AG Grid:
 •	Action buttons per row
 •	Export to CSV
 
+## angular material in angular 12
+```
+npm install @angular/material@12 @angular/cdk@12
+ng add @angular/material@12
+```
+Pick a theme (e.g., Indigo/Pink), enable animations.
 ## Two separate app: main angular app and web components
 
 ng build web-components --configuration production

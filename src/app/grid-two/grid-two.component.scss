@@ -14,3 +14,40 @@
   padding: 2px 6px;
   font-size: 12px;
 }
+
+.btn-view {
+  background: #1976d2;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+.btn-edit {
+  background: #1976d2;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  margin-right: 4px;
+  cursor: pointer;
+}
+.btn-delete {
+  background: #d32f2f;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.btn-view:hover {
+  background: #1565c0;
+}
+
+
+.btn-edit:hover {
+  background: #1565c0;
+}
+.btn-delete:hover {
+  background: #b71c1c;
+}
