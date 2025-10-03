@@ -1,0 +1,24 @@
+<div class="filter-panel">
+  <input [(ngModel)]="quickFilter" placeholder="Search by name..." />
+  <select [(ngModel)]="departmentFilter">
+    <option value="">All Departments</option>
+    <option value="HR">HR</option>
+    <option value="IT">IT</option>
+    <option value="Finance">Finance</option>
+  </select>
+  <button (click)="applyFilters()">Apply</button>
+  <button (click)="clearFilters()">Clear</button>
+  <button (click)="exportSelected()">Export Selected</button>
+  <button (click)="deleteSelected()">Delete Selected</button>
+</div>
+
+<ag-grid-angular
+  class="ag-theme-alpine"
+  style="width: 100%; height: 500px;"
+  [rowData]="rowData"
+  [columnDefs]="columnDefs"
+  rowSelection="multiple"
+  [pagination]="true"
+  [paginationPageSize]="10"
+  (gridReady)="onGridReady($event)">
+</ag-grid-angular>
