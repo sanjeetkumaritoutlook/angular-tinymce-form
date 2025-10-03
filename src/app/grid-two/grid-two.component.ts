@@ -33,8 +33,8 @@ rowData: any[] = [];
         headerName: 'Actions',
         cellRenderer: (params: ICellRendererParams)  => {
           return `
-            <button class="btn-action" data-action="edit">Edit</button>
-            <button class="btn-action" data-action="delete">Delete</button>
+            <button class="btn-edit" data-action="edit">Edit</button>
+            <button class="btn-delete" data-action="delete">Delete</button>
           `;
         },
         width: 160
@@ -54,10 +54,33 @@ rowData: any[] = [];
   }
 
   
-  onGridReady(params: GridReadyEvent) {
-    this.gridApi = params.api;
+    // 👇 Handle View/Edit/Delete
+   onGridReady(params: any) {
+    params.api.addEventListener('cellClicked', (event: any) => {
+      if (event.colDef.headerName === 'Actions') {
+        if (event.event.target.classList.contains('btn-edit')) {
+          this.onEdit(event.data);
+        } else if (event.event.target.classList.contains('btn-delete')) {
+          this.onDelete(event.data);
+        }
+      }
+    });
   }
 
+   onView(row: any) {
+    alert(`Viewing details for: ${row.name} (Role: ${row.role})`);
+  }
+
+  onEdit(row: any) {
+    alert(`Editing: ${row.name} (ID: ${row.id})`);
+  }
+
+  
+  onDelete(row: any) {
+    if (confirm(`Are you sure you want to delete ${row.name}?`)) {
+      this.rowData = this.rowData.filter(r => r.id !== row.id);
+    }
+  }
   applyFilters() {
     this.gridApi.setQuickFilter(this.quickFilter);
 
