@@ -2,18 +2,24 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-child',
-  template: `
-    <p>Child Component Content</p>
-  `
-,
+  templateUrl: './child.component.html',
   styleUrls: ['./child.component.scss']
 })
 export class ChildComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
-    @Output() loadingChange = new EventEmitter<boolean>();
+ @Output() formReady = new EventEmitter<void>();
 
+  formLoaded = false;
+
+  ngOnInit() {
+      console.log('Child init'); // 🟢 debug
+    // Simulate async form setup (like API call, schema fetch, etc.)
+    setTimeout(() => {
+      this.formLoaded = true;
+      console.log('Emitting formReady'); // 🟢 debug
+      this.formReady.emit(); // notify parent that form is ready
+    }, 800); // e.g., after 800ms
+  }
 }

@@ -1,1 +1,14 @@
-<p>child works!</p>
+<div *ngIf="formLoaded; else loadingForm">
+  <form>
+    <label>
+      Name:
+      <input type="text" />
+    </label>
+    <button>Submit</button>
+  </form>
+</div>
+
+<ng-template #loadingForm>
+  <!-- Optional: small internal loader if child still loading internally -->
+  <p>Preparing form...</p>
+</ng-template>

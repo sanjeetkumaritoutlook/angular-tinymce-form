@@ -1,11 +1,7 @@
-<ng-container *ngIf="!isLoading; else loader">
-  <h2>Parent Component Content</h2>
-  <app-child (loadingChange)="onLoadingChange($event)"></app-child>
-</ng-container>
+<app-child (formReady)="onFormReady()"></app-child>
 
-<ng-template #loader>
-  <div class="spinner">
-    <div class="loader"></div>
-    <p>Loading...</p>
-  </div>
-</ng-template>
+<!-- show global loader over content if loading -->
+<div class="spinner-overlay" *ngIf="isLoading">
+  <div class="loader"></div>
+  <p>Loading form...</p>
+</div>

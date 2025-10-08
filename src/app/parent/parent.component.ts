@@ -5,27 +5,18 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './parent.component.html',
   styleUrls: ['./parent.component.scss']
 })
-export class ParentComponent implements OnInit {
+export class ParentComponent  {
 
   constructor() { }
 
-    isLoading = true;
+   isLoading = true; // initially true until child signals it's ready
 
-  ngOnInit() {
-    // Show loader for 400 ms on initial load
-    setTimeout(() => {
-      this.isLoading = false;
-    }, 400);
-  }
+  onFormReady() {
+      console.log('Form ready received'); // 🟢 debug
+    this.isLoading = false; // hide spinner once child notifies
+    //to prevent flicker, add a short artificial delay before hiding the spinner:
+    //  setTimeout(() => this.isLoading = false, 300); 
 
-  // Optional: still keep child-to-parent communication
-  onLoadingChange(flag: boolean) {
-    if (flag) {
-      this.isLoading = true;
-      setTimeout(() => {
-        this.isLoading = false;
-      }, 400);
-    }
   }
 
 }
