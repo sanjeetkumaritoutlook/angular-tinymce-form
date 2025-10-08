@@ -1,0 +1,61 @@
+.form-wrapper {
+  background: #fafafa;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+    color: #333;
+  }
+
+  input,
+  select {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  input:focus,
+  select:focus {
+    outline: none;
+    border-color: #0078d7;
+  }
+}
+
+.form-actions {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+
+  button {
+    background-color: #0078d7;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+}
+
+.loading-text {
+  color: gray;
+  text-align: center;
+  margin-top: 1rem;
+}

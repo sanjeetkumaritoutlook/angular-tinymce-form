@@ -1,14 +1,44 @@
-<div *ngIf="formLoaded; else loadingForm">
-  <form>
-    <label>
-      Name:
-      <input type="text" />
-    </label>
-    <button>Submit</button>
+<div *ngIf="formLoaded; else loadingForm" class="form-wrapper">
+  <form [formGroup]="vendorForm" (ngSubmit)="onSubmit()">
+    <div class="form-grid">
+      <div class="form-group">
+        <label>Company Name</label>
+        <input type="text" formControlName="companyName" />
+      </div>
+
+      <div class="form-group">
+        <label>Contact Person</label>
+        <input type="text" formControlName="contactPerson" />
+      </div>
+
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" formControlName="email" />
+      </div>
+
+      <div class="form-group">
+        <label>Phone</label>
+        <input type="tel" formControlName="phone" />
+      </div>
+
+      <div class="form-group">
+        <label>Category</label>
+        <select formControlName="category">
+          <option value="">Select</option>
+          <option value="software">Software</option>
+          <option value="hardware">Hardware</option>
+          <option value="services">Services</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <!-- <button type="submit" [disabled]="vendorForm.invalid">Submit</button> -->
+      <button type="submit">Submit</button>
+    </div>
   </form>
 </div>
 
 <ng-template #loadingForm>
-  <!-- Optional: small internal loader if child still loading internally -->
-  <p>Preparing form...</p>
+  <p class="loading-text">Preparing enterprise form...</p>
 </ng-template>

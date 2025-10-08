@@ -18,6 +18,14 @@ Parent receives the event → sets isLoading = false → removes spinne
 Don’t wrap your <app-child> inside the *ngIf="!isLoading".
 The child must mount first to emit the ready signal.
 ```
+
+✅ When app loads:
+
+Spinner shows (parent) while child initializes.
+
+After ~800ms, form loads, formReady emitted → spinner hides.
+
+You see a clean, enterprise-grade form with validation, layout, and Material polish.
 ## Bad Approch, which never works
 
 Initially, isLoading = true, so Angular renders the else loader block.

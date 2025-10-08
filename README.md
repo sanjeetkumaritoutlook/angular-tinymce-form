@@ -8,6 +8,8 @@ Run in node Terminal-> set NODE_OPTIONS=--openssl-legacy-provider
 
 to check source code repo on github ui:-> git remote show origin
 
+why not JSX for Angular:-> https://medium.com/@azizaidi1900/why-jsx-wont-work-in-angular-a4a4843b2220
+
 ## AI course
 https://github.com/microsoft/AI-For-Beginners
 
@@ -80,12 +82,23 @@ a real-world Angular 12 project uses AG Grid:
 •	Action buttons per row
 •	Export to CSV
 
+AG Grid: As of v27, the property cellRendererFramework is deprecated. The property cellRenderer can now be used for JavaScript AND Framework Components
+
 ## angular material in angular 12
 ```
 npm install @angular/material@12 @angular/cdk@12
 ng add @angular/material@12
 ```
 Pick a theme (e.g., Indigo/Pink), enable animations.
+```
+Choose:
+
+Theme: Indigo/Pink (or any)
+
+Add global typography: ✅ Yes
+
+Add animations: ✅ Yes
+```
 ## Two separate app: main angular app and web components
 
 ng build web-components --configuration production

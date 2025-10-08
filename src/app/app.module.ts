@@ -21,9 +21,14 @@ import { GridTwoComponent } from './grid-two/grid-two.component';
 import { GridStatusCellComponent } from './grid-status-cell/grid-status-cell.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EditDialogComponent } from './edit-dialog/edit-dialog.component'; // Angular Data Grid Component
+
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatButtonModule } from '@angular/material/button';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
 import { ChildComponent } from './child/child.component';
 import { ParentComponent } from './parent/parent.component';
 
