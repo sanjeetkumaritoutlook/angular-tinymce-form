@@ -9,6 +9,7 @@ import { FormTwoComponent } from './web-components/form-two/form-two.component';
 import { UsernameCheckComponent } from './username-check/username-check.component';
 import { GridOneComponent } from './grid-one/grid-one.component';
 import { GridTwoComponent } from './grid-two/grid-two.component';
+import { ParentComponent } from './parent/parent.component';
 const routes: Routes = [
   { path: '', redirectTo: '/user', pathMatch: 'full' },
   { path: 'user', loadChildren: () => import('./user/user.module').then(m => m.UserModule) },
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'username', component: UsernameCheckComponent },  
   { path: 'ag-grid', component: GridOneComponent },  
   { path: 'enterprise-grid', component: GridTwoComponent },  
+  { path: 'parent-spinner', component: ParentComponent },  
   { path: '**', component: ExampleComponent },
 ];
 

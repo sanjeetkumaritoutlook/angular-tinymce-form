@@ -24,6 +24,8 @@ import { EditDialogComponent } from './edit-dialog/edit-dialog.component'; // An
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { ChildComponent } from './child/child.component';
+import { ParentComponent } from './parent/parent.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { MatInputModule } from '@angular/material/input';
     GridRowActionsComponent,
     GridTwoComponent,
     GridStatusCellComponent,
-    EditDialogComponent
+    EditDialogComponent,
+    ChildComponent,
+    ParentComponent
   ],
   imports: [
     BrowserModule,

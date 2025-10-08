@@ -6,6 +6,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run in node Terminal-> set NODE_OPTIONS=--openssl-legacy-provider
 
+to check source code repo on github ui:-> git remote show origin
+
 ## AI course
 https://github.com/microsoft/AI-For-Beginners
 
