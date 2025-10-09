@@ -106,6 +106,15 @@ ng build web-components --configuration production
 ng build
 
 web component has separate main.ts, app.module.ts ,tsconfig.app.json (its mentioned separately under projects in angular.json)
+
+![Full-stack roadmap](fullstack.jpg)
+
+## DB tools
+Studio 3T → MongoDB-focused, with deep document editing features.
+
+DbVisualizer → Multi-database, SQL-first, great if you deal with PostgreSQL, MySQL, Oracle, etc., in one tool.
+
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
